@@ -40,71 +40,213 @@
         .animate-slide-x {
             animation: slide-x 20s linear infinite;
         }
+
+        /* Base */
+        #sticky-menu {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 999;
+            background-color: #FAF6F2;
+            padding: 16px 0;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+        }
+
+        .header-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        /* Menu desktop */
+        .main-menu {
+            display: flex;
+            align-items: center;
+            gap: 32px;
+        }
+
+        .main-menu ul {
+            list-style: none;
+            display: flex;
+            gap: 24px;
+            margin: 0;
+            padding: 0;
+        }
+
+        .main-menu ul li a {
+            text-decoration: none;
+            color: #020826;
+            font-weight: 600;
+            font-family: 'Raleway', sans-serif;
+            transition: color 0.3s ease;
+        }
+
+        .main-menu ul li a:hover {
+            color: #8C785C;
+        }
+
+        .cta-button {
+            background-color: #8C785C;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        .cta-button:hover {
+            background-color: #020826;
+        }
+
+        /* Oculta o botão mobile no desktop */
+        .mobile-toggle {
+            display: none;
+            font-size: 26px;
+            background: none;
+            border: none;
+            cursor: pointer;
+        }
+
+        /* Oculta botão no mobile */
+        .desktop-only {
+            display: inline-block;
+        }
+
+        .mobile-only {
+            display: none;
+        }
+
+        /* Responsivo */
+        @media (max-width: 1024px) {
+            .main-menu {
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background-color: #FAF6F2;
+                flex-direction: column;
+                align-items: center;
+                padding: 20px 0;
+                display: none;
+            }
+
+            .main-menu.show {
+                display: flex;
+            }
+
+            .main-menu ul {
+                flex-direction: column;
+                gap: 16px;
+            }
+
+            .desktop-only {
+                display: none;
+            }
+
+            .mobile-only {
+                display: inline-block;
+                margin-top: 16px;
+            }
+
+            .mobile-toggle {
+                display: block;
+                color: #020826;
+            }
+        }
+
+        .cta-button {
+            background-color: #8C785C;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .cta-button:hover {
+            background-color: #020826;
+        }
+
+        .icon-arrow {
+            width: 18px;
+            height: 18px;
+            stroke: #fff;
+        }
+
+        /* VISIBILIDADE POR DISPOSITIVO */
+        .desktop-only {
+            display: inline-block;
+        }
+
+        .mobile-only {
+            display: none;
+        }
+
+        @media (max-width: 1024px) {
+            .desktop-only {
+                display: none;
+            }
+
+            .mobile-only {
+                display: inline-flex;
+            }
+        }
     </style>
 </head>
 
 <body>
     <div class="page-wrapper relative z-[1] bg-white">
         <!--...::: Header Start :::... -->
-        <header class="site-header site-header--absolute is--white py-3" id="sticky-menu">
+        <header id="sticky-menu">
             <div class="global-container">
-                <div class="flex items-center justify-between gap-x-8">
-                    <!-- Header Logo -->
-                    <a href="#hero-section" class="">
+                <div class="header-inner">
+                    <!-- Logo -->
+                    <a href="#hero-section">
                         <img src="assets/img/Youth Meraki V1 WEBSITE.png" alt="Youth Meraki Logo" width="96"
                             height="24" />
                     </a>
-                    <!-- Header Logo -->
 
-                    <!-- Header Navigation -->
-                    <div class="menu-block-wrapper">
-                        <div class="menu-overlay"></div>
-                        <nav class="menu-block" id="append-menu-header">
-                            <div class="mobile-menu-head">
-                                <div class="go-back">
-                                    <img class="dropdown-icon" src="assets/img/icon-black-long-arrow-right.svg"
-                                        alt="voltar" width="16" height="16" />
-                                </div>
-                                <div class="current-menu-title"></div>
-                                <div class="mobile-menu-close">&times;</div>
-                            </div>
-                            <ul class="site-menu-main is-text-white">
-                                <li class="nav-item"><a href="#hero-section" class="nav-link-item">Início</a></li>
-                                <li class="nav-item"><a href="#sobre" class="nav-link-item">Sobre</a></li>
+                    <!-- Botão Mobile -->
+                    <button class="mobile-toggle" id="menu-toggle">&#9776;</button>
 
-                                <li class="nav-item"><a href="#oradores" class="nav-link-item">Oradores</a></li>
-                                <li class="nav-item"><a href="#paineis" class="nav-link-item">Painéis</a></li>
-                                <li class="nav-item"><a href="#patrocinadores" class="nav-link-item">Organizadores</a>
-                                </li>
-                                <li class="nav-item"><a href="#pacotes" class="nav-link-item">Pacotes</a></li>
-                            </ul>
-                        </nav>
-                    </div>
-                    <!-- Header Navigation -->
-
-                    <!-- Header Action Button -->
-                    <div class="flex items-center gap-6">
-                        <a href="#inscricao"
-                            class="inline-flex items-center gap-3 rounded-full bg-[#22185D] px-5 py-[12px] text-[#FFFE] font-semibold shadow-lg transition-all duration-300 ease-in-out transform hover:-translate-y-1 hover:bg-[#b79275] hover:text-white hidden sm:flex">
-                            Inscreva-se
-                            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24"
+                    <!-- Menu -->
+                    <nav class="main-menu" id="main-menu">
+                        <ul>
+                            <li><a href="#hero-section">Início</a></li>
+                            <li><a href="#sobre">Sobre</a></li>
+                            <li><a href="#oradores">Oradores</a></li>
+                            <li><a href="#paineis">Painéis</a></li>
+                            <li><a href="#patrocinadores">Organizadores</a></li>
+                            <li><a href="#pacotes">Pacotes</a></li>
+                        </ul>
+                        <a href="#inscricao" class="cta-button mobile-only">
+                            <span>Inscreva-se</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon-arrow" viewBox="0 0 24 24" fill="none"
                                 stroke="currentColor" stroke-width="2">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
                             </svg>
                         </a>
+                    </nav>
 
+                    <!-- Botão Desktop -->
+                    <a href="#inscricao" class="cta-button desktop-only">
+                        <span>Inscreva-se</span>
 
-                        <!-- Mobile Menu Trigger -->
-                        <div class="block lg:hidden">
-                            <button class="mobile-menu-trigger is-white">
-                                <span></span>
-                            </button>
-                        </div>
-                    </div>
-                    <!-- Header Action Button -->
+                    </a>
                 </div>
             </div>
         </header>
+
+
+
+
 
         <!--...::: Header End :::... -->
 
@@ -1671,6 +1813,15 @@
                 top: 0,
                 behavior: "smooth"
             });
+        });
+    </script>
+
+    <script>
+        const toggleBtn = document.getElementById("menu-toggle");
+        const menu = document.getElementById("main-menu");
+
+        toggleBtn.addEventListener("click", () => {
+            menu.classList.toggle("show");
         });
     </script>
 
