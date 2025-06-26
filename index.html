@@ -1341,170 +1341,193 @@
             </section>
 
 
-<!--...::: Formulário de Inscrição Section Start :::... -->
-<section id="inscricao-section" class="bg-[#FFFFFE]">
-    <div class="xl:pt-24 xl:py-[30px] mb-28 xl:mb-[130px]">
-        <div class="global-container">
-            <!-- Título -->
-            <div class="jos mb-10 text-center md:mb-16 xl:mb-20">
-                <h2 class="font-raleway text-4xl sm:text-[44px] lg:text-[56px] xl:text-[75px] leading-tight text-[#020826]">
-                    Formulário de Inscrição
-                </h2>
-            </div>
-
-            <!-- Form Container -->
-            <div class="jos mx-auto max-w-4xl rounded-[16px] bg-[#F7F4F0] p-10 shadow-md transition-all duration-300 hover:shadow-2xl">
-                <form action="https://formspree.io/f/mlqvzkyx" method="post" enctype="multipart/form-data" class="flex flex-col gap-y-5">
-                    <!-- 1st Row -->
-                    <div class="grid grid-cols-1 gap-6 xl:grid-cols-2">
-                        <!-- Nome -->
-                        <div class="flex flex-col gap-y-[10px]">
-                            <label for="nome" class="text-lg font-bold leading-[1.6]">Nome</label>
-                            <input type="text" name="nome" id="nome" placeholder="Seu nome"
-                                class="rounded-[10px] border border-gray-300 bg-white px-6 py-[18px] font-bold text-black outline-none transition-all placeholder:text-slate-500 focus:border-[#D3AE91] focus:ring-1 focus:ring-[#D3AE91]"
-                                required />
+            <!--...::: Formulário de Inscrição Section Start :::... -->
+            <section id="inscricao-section" class="bg-[#FFFFFE]">
+                <div class="xl:pt-24 xl:py-[30px] mb-28 xl:mb-[130px]">
+                    <div class="global-container">
+                        <!-- Título -->
+                        <div class="jos mb-10 text-center md:mb-16 xl:mb-20">
+                            <h2 class="font-raleway text-4xl sm:text-[44px] lg:text-[56px] xl:text-[75px] leading-tight text-[#020826]">
+                                Formulário de Inscrição
+                            </h2>
                         </div>
-                        
-                        <!-- Apelido -->
-                        <div class="flex flex-col gap-y-[10px]">
-                            <label for="apelido" class="text-lg font-bold leading-[1.6]">Apelido</label>
-                            <input type="text" name="apelido" id="apelido" placeholder="Seu apelido"
-                                class="rounded-[10px] border border-gray-300 bg-white px-6 py-[18px] font-bold text-black outline-none transition-all placeholder:text-slate-500 focus:border-[#D3AE91] focus:ring-1 focus:ring-[#D3AE91]"
-                                required />
+
+                        <!-- Form Container -->
+                        <div class="jos mx-auto max-w-4xl rounded-[16px] bg-[#F7F4F0] p-10 shadow-md transition-all duration-300 hover:shadow-2xl">
+                            <form action="https://formspree.io/f/mlqvzkyx" method="post" enctype="multipart/form-data" class="flex flex-col gap-y-5">
+                                <!-- 1st Row -->
+                                <div class="grid grid-cols-1 gap-6 xl:grid-cols-2">
+                                    <!-- Nome -->
+                                    <div class="flex flex-col gap-y-[10px]">
+                                        <label for="nome" class="text-lg font-bold leading-[1.6]">Nome</label>
+                                        <input type="text" name="nome" id="nome" placeholder="Seu nome"
+                                            class="rounded-[10px] border border-gray-300 bg-white px-6 py-[18px] font-bold text-black outline-none transition-all placeholder:text-slate-500 focus:border-[#D3AE91] focus:ring-1 focus:ring-[#D3AE91]"
+                                            required />
+                                    </div>
+                                    
+                                    <!-- Apelido -->
+                                    <div class="flex flex-col gap-y-[10px]">
+                                        <label for="apelido" class="text-lg font-bold leading-[1.6]">Apelido</label>
+                                        <input type="text" name="apelido" id="apelido" placeholder="Seu apelido"
+                                            class="rounded-[10px] border border-gray-300 bg-white px-6 py-[18px] font-bold text-black outline-none transition-all placeholder:text-slate-500 focus:border-[#D3AE91] focus:ring-1 focus:ring-[#D3AE91]"
+                                            required />
+                                    </div>
+                                </div>
+
+                                <!-- 2nd Row -->
+                                <div class="grid grid-cols-1 gap-6 xl:grid-cols-2">
+                                    <!-- Email -->
+                                    <div class="flex flex-col gap-y-[10px]">
+                                        <label for="email" class="text-lg font-bold leading-[1.6]">Email</label>
+                                        <input type="email" name="email" id="email" placeholder="seuemail@exemplo.com"
+                                            class="rounded-[10px] border border-gray-300 bg-white px-6 py-[18px] font-bold text-black outline-none transition-all placeholder:text-slate-500 focus:border-[#D3AE91] focus:ring-1 focus:ring-[#D3AE91]"
+                                            required />
+                                    </div>
+                                    
+                                    <!-- Idade -->
+                                    <div class="flex flex-col gap-y-[10px]">
+                                        <label for="idade" class="text-lg font-bold leading-[1.6]">Idade</label>
+                                        <input type="number" name="idade" id="idade" min="16" max="99" placeholder="Sua idade"
+                                            class="rounded-[10px] border border-gray-300 bg-white px-6 py-[18px] font-bold text-black outline-none transition-all placeholder:text-slate-500 focus:border-[#D3AE91] focus:ring-1 focus:ring-[#D3AE91]"
+                                            required />
+                                    </div>
+                                </div>
+
+                                <!-- 3rd Row -->
+                                <div class="grid grid-cols-1 gap-6 xl:grid-cols-2">
+                                    <!-- Gênero -->
+                                    <div class="flex flex-col gap-y-[10px]">
+                                        <label for="genero" class="text-lg font-bold leading-[1.6]">Gênero</label>
+                                        <select name="genero" id="genero"
+                                            class="rounded-[10px] border border-gray-300 bg-white px-6 py-[18px] font-bold text-black outline-none transition-all placeholder:text-slate-500 focus:border-[#D3AE91] focus:ring-1 focus:ring-[#D3AE91]"
+                                            required>
+                                            <option value="" disabled selected>Selecione seu gênero</option>
+                                            <option value="homem">Homem</option>
+                                            <option value="mulher">Mulher</option>
+                                            <option value="outro">Outro</option>
+                                        </select>
+                                    </div>
+                                    
+                                    <!-- Cidade -->
+                                    <div class="flex flex-col gap-y-[10px]">
+                                        <label for="cidade" class="text-lg font-bold leading-[1.6]">Cidade</label>
+                                        <select name="cidade" id="cidade"
+                                            class="rounded-[10px] border border-gray-300 bg-white px-6 py-[18px] font-bold text-black outline-none transition-all placeholder:text-slate-500 focus:border-[#D3AE91] focus:ring-1 focus:ring-[#D3AE91]"
+                                            required>
+                                            <option value="" disabled selected>Selecione sua cidade</option>
+                                            <option value="Maputo">Maputo</option>
+                                            <option value="Matola">Matola</option>
+                                            <option value="Beira">Beira</option>
+                                            <option value="Nampula">Nampula</option>
+                                            <option value="outra">Outra</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <!-- 4th Row -->
+                                <div class="grid grid-cols-1 gap-6 xl:grid-cols-2">
+                                    <!-- Telefone -->
+                                    <div class="flex flex-col gap-y-[10px]">
+                                        <label for="telefone" class="text-lg font-bold leading-[1.6]">Telefone</label>
+                                        <input type="tel" name="telefone" id="telefone" placeholder="+258 84 123 4567"
+                                            class="rounded-[10px] border border-gray-300 bg-white px-6 py-[18px] font-bold text-black outline-none transition-all placeholder:text-slate-500 focus:border-[#D3AE91] focus:ring-1 focus:ring-[#D3AE91]"
+                                            required />
+                                    </div>
+                                    
+                                    <!-- Faculdade -->
+                                    <div class="flex flex-col gap-y-[10px]">
+                                        <label for="faculdade" class="text-lg font-bold leading-[1.6]">Faculdade</label>
+                                        <select name="faculdade" id="faculdade"
+                                            class="rounded-[10px] border border-gray-300 bg-white px-6 py-[18px] font-bold text-black outline-none transition-all placeholder:text-slate-500 focus:border-[#D3AE91] focus:ring-1 focus:ring-[#D3AE91]"
+                                            required>
+                                            <option value="" disabled selected>Selecione sua faculdade</option>
+                                            <option value="UEM">Universidade Eduardo Mondlane</option>
+                                            <option value="UP">Universidade Pedagógica</option>
+                                            <option value="UCM">Universidade Católica</option>
+                                            <option value="outra">Outra</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <!-- 5th Row -->
+                                <div class="grid grid-cols-1 gap-6 xl:grid-cols-2">
+                                    <!-- Escolaridade -->
+                                    <div class="flex flex-col gap-y-[10px]">
+                                        <label for="escolaridade" class="text-lg font-bold leading-[1.6]">Nível de Escolaridade</label>
+                                        <select name="escolaridade" id="escolaridade"
+                                            class="rounded-[10px] border border-gray-300 bg-white px-6 py-[18px] font-bold text-black outline-none transition-all placeholder:text-slate-500 focus:border-[#D3AE91] focus:ring-1 focus:ring-[#D3AE91]"
+                                            required>
+                                            <option value="" disabled selected>Selecione seu nível</option>
+                                            <option value="medio">Médio</option>
+                                            <option value="tecnico">Técnico</option>
+                                            <option value="superior">Superior</option>
+                                            <option value="mestre">Mestre</option>
+                                        </select>
+                                    </div>
+                                    
+                                    <!-- Curso -->
+                                    <div class="flex flex-col gap-y-[10px]">
+                                        <label for="curso" class="text-lg font-bold leading-[1.6]">Área de Formação/Curso</label>
+                                        <input type="text" name="curso" id="curso" placeholder="Ex: Engenharia Informática"
+                                            class="rounded-[10px] border border-gray-300 bg-white px-6 py-[18px] font-bold text-black outline-none transition-all placeholder:text-slate-500 focus:border-[#D3AE91] focus:ring-1 focus:ring-[#D3AE91]"
+                                            required />
+                                    </div>
+                                </div>
+
+                                <!-- 6th Row - Comprovativo de Pagamento -->
+                                <div class="flex flex-col gap-y-[10px]">
+                                    <label for="comprovativo" class="text-lg font-bold leading-[1.6]">Comprovativo de Pagamento</label>
+                                    <div class="relative rounded-[10px] border border-gray-300 bg-white focus-within:border-[#D3AE91] focus-within:ring-1 focus-within:ring-[#D3AE91]">
+                                        <input type="file" name="comprovativo" id="comprovativo" 
+                                            class="absolute inset-0 w-full h-full opacity-0 cursor-pointer"
+                                            accept=".pdf,.jpg,.jpeg,.png" required
+                                            onchange="updateFileName(this)"/>
+                                        <div class="flex items-center justify-between px-6 py-[18px]">
+                                            <span id="file-name" class="font-bold text-slate-500 truncate pr-2">Selecione um arquivo...</span>
+                                            <span class="bg-[#f3f4f6] hover:bg-[#D3AE91] hover:text-white text-black font-bold py-2 px-4 rounded transition-colors">
+                                                Escolher arquivo
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <p class="mt-1 text-sm text-gray-500">Formatos aceites: PDF, JPG, PNG (até 5MB)</p>
+                                </div>
+
+                                <!-- Submit Button -->
+                                <div class="flex justify-center pt-4">
+                                    <button type="submit"
+                                        class="button rounded-[50px] border-2 border-[#8C785C] bg-[#8C785C] px-12 py-4 text-white hover:border-[#020826] hover:bg-[#020826] transition-colors">
+                                        Confirmar Inscrição
+                                    </button>
+                                </div>
+                            </form>
                         </div>
                     </div>
+                </div>
+            </section>
+            <script>
+                function updateFileName(input) {
+                    const fileNameDisplay = document.getElementById('file-name');
+                    if (input.files.length > 0) {
+                        fileNameDisplay.textContent = input.files[0].name;
+                        fileNameDisplay.classList.remove('text-slate-500');
+                        fileNameDisplay.classList.add('text-black');
+                    } else {
+                        fileNameDisplay.textContent = 'Selecione um arquivo...';
+                        fileNameDisplay.classList.remove('text-black');
+                        fileNameDisplay.classList.add('text-slate-500');
+                    }
+                }
+            </script>
+            <!--...::: Formulário de Inscrição Section End :::... -->
 
-                    <!-- 2nd Row -->
-                    <div class="grid grid-cols-1 gap-6 xl:grid-cols-2">
-                        <!-- Email -->
-                        <div class="flex flex-col gap-y-[10px]">
-                            <label for="email" class="text-lg font-bold leading-[1.6]">Email</label>
-                            <input type="email" name="email" id="email" placeholder="seuemail@exemplo.com"
-                                class="rounded-[10px] border border-gray-300 bg-white px-6 py-[18px] font-bold text-black outline-none transition-all placeholder:text-slate-500 focus:border-[#D3AE91] focus:ring-1 focus:ring-[#D3AE91]"
-                                required />
-                        </div>
-                        
-                        <!-- Idade -->
-                        <div class="flex flex-col gap-y-[10px]">
-                            <label for="idade" class="text-lg font-bold leading-[1.6]">Idade</label>
-                            <input type="number" name="idade" id="idade" min="16" max="99" placeholder="Sua idade"
-                                class="rounded-[10px] border border-gray-300 bg-white px-6 py-[18px] font-bold text-black outline-none transition-all placeholder:text-slate-500 focus:border-[#D3AE91] focus:ring-1 focus:ring-[#D3AE91]"
-                                required />
-                        </div>
-                    </div>
 
-                    <!-- 3rd Row -->
-                    <div class="grid grid-cols-1 gap-6 xl:grid-cols-2">
-                        <!-- Gênero -->
-                        <div class="flex flex-col gap-y-[10px]">
-                            <label for="genero" class="text-lg font-bold leading-[1.6]">Gênero</label>
-                            <select name="genero" id="genero"
-                                class="rounded-[10px] border border-gray-300 bg-white px-6 py-[18px] font-bold text-black outline-none transition-all placeholder:text-slate-500 focus:border-[#D3AE91] focus:ring-1 focus:ring-[#D3AE91]"
-                                required>
-                                <option value="" disabled selected>Selecione seu gênero</option>
-                                <option value="homem">Homem</option>
-                                <option value="mulher">Mulher</option>
-                                <option value="outro">Outro</option>
-                            </select>
-                        </div>
-                        
-                        <!-- Cidade -->
-                        <div class="flex flex-col gap-y-[10px]">
-                            <label for="cidade" class="text-lg font-bold leading-[1.6]">Cidade</label>
-                            <select name="cidade" id="cidade"
-                                class="rounded-[10px] border border-gray-300 bg-white px-6 py-[18px] font-bold text-black outline-none transition-all placeholder:text-slate-500 focus:border-[#D3AE91] focus:ring-1 focus:ring-[#D3AE91]"
-                                required>
-                                <option value="" disabled selected>Selecione sua cidade</option>
-                                <option value="Maputo">Maputo</option>
-                                <option value="Matola">Matola</option>
-                                <option value="Beira">Beira</option>
-                                <option value="Nampula">Nampula</option>
-                                <option value="outra">Outra</option>
-                            </select>
-                        </div>
-                    </div>
-
-                    <!-- 4th Row - Telefone simplificado -->
-                    <div class="grid grid-cols-1 gap-6 xl:grid-cols-2">
-                        <!-- Telefone -->
-                        <div class="flex flex-col gap-y-[10px]">
-                            <label for="telefone" class="text-lg font-bold leading-[1.6]">Telefone</label>
-                            <input type="tel" name="telefone" id="telefone" placeholder="+258 84 123 4567"
-                                class="rounded-[10px] border border-gray-300 bg-white px-6 py-[18px] font-bold text-black outline-none transition-all placeholder:text-slate-500 focus:border-[#D3AE91] focus:ring-1 focus:ring-[#D3AE91]"
-                                required />
-                        </div>
-                        
-                        <!-- Faculdade -->
-                        <div class="flex flex-col gap-y-[10px]">
-                            <label for="faculdade" class="text-lg font-bold leading-[1.6]">Faculdade</label>
-                            <select name="faculdade" id="faculdade"
-                                class="rounded-[10px] border border-gray-300 bg-white px-6 py-[18px] font-bold text-black outline-none transition-all placeholder:text-slate-500 focus:border-[#D3AE91] focus:ring-1 focus:ring-[#D3AE91]"
-                                required>
-                                <option value="" disabled selected>Selecione sua faculdade</option>
-                                <option value="UEM">Universidade Eduardo Mondlane</option>
-                                <option value="UP">Universidade Pedagógica</option>
-                                <option value="UCM">Universidade Católica</option>
-                                <option value="outra">Outra</option>
-                            </select>
-                        </div>
-                    </div>
-
-                    <!-- 5th Row -->
-                    <div class="grid grid-cols-1 gap-6 xl:grid-cols-2">
-                        <!-- Escolaridade -->
-                        <div class="flex flex-col gap-y-[10px]">
-                            <label for="escolaridade" class="text-lg font-bold leading-[1.6]">Nível de Escolaridade</label>
-                            <select name="escolaridade" id="escolaridade"
-                                class="rounded-[10px] border border-gray-300 bg-white px-6 py-[18px] font-bold text-black outline-none transition-all placeholder:text-slate-500 focus:border-[#D3AE91] focus:ring-1 focus:ring-[#D3AE91]"
-                                required>
-                                <option value="" disabled selected>Selecione seu nível</option>
-                                <option value="medio">Médio</option>
-                                <option value="tecnico">Técnico</option>
-                                <option value="superior">Superior</option>
-                                <option value="mestre">Mestre</option>
-                            </select>
-                        </div>
-                        
-                        <!-- Curso -->
-                        <div class="flex flex-col gap-y-[10px]">
-                            <label for="curso" class="text-lg font-bold leading-[1.6]">Área de Formação/Curso</label>
-                            <input type="text" name="curso" id="curso" placeholder="Ex: Engenharia Informática"
-                                class="rounded-[10px] border border-gray-300 bg-white px-6 py-[18px] font-bold text-black outline-none transition-all placeholder:text-slate-500 focus:border-[#D3AE91] focus:ring-1 focus:ring-[#D3AE91]"
-                                required />
-                        </div>
-                    </div>
-
-                    <!-- 6th Row - Comprovativo -->
-                    <div class="flex flex-col gap-y-[10px]">
-                        <label for="comprovativo" class="text-lg font-bold leading-[1.6]">Comprovativo de Pagamento</label>
-                        <div class="relative rounded-[10px] focus-within:border-[#D3AE91] focus-within:ring-1 focus-within:ring-[#D3AE91]">
-                            <input type="file" name="comprovativo" id="comprovativo"
-                                class="absolute inset-0 h-full w-full cursor-pointer opacity-0"
-                                accept=".pdf,.jpg,.jpeg,.png" required />
-                            <div class="flex items-center justify-between rounded-[10px] border border-gray-300 bg-white px-6 py-[18px] hover:border-[#D3AE91]">
-                                <span class="font-bold text-slate-500">Selecione um arquivo...</span>
-                                <span class="rounded bg-[#f3f4f6] px-4 py-2 font-bold text-black hover:bg-[#D3AE91] hover:text-white">Escolher</span>
-                            </div>
-                        </div>
-                        <p class="mt-1 text-sm text-gray-500">Formatos aceites: PDF, JPG, PNG (até 5MB)</p>
-                    </div>
-
-                    <!-- Submit Button -->
-                    <div class="flex justify-center pt-4">
-                        <button type="submit"
-                            class="button rounded-[50px] border-2 border-black bg-black px-12 py-4 text-white after:bg-[#D3AE91] hover:border-[#D3AE91] hover:text-white">
-                            Confirmar Inscrição
-                        </button>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
-</section>
-<!--...::: Formulário de Inscrição Section End :::... -->
+<<<<<<< HEAD
+=======
+            <!-- novas -->
 
 
 
+>>>>>>> formulario_lourenco
 
 
             <!--...::: Content Section End :::... -->
